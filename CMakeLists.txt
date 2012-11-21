@@ -18,6 +18,9 @@ set (CMAKE_BACKWARDS_COMPATIBILITY 2.6)
 
 Project (FireBreath)
 
+# Allow super-projects to disable firebreath-specific git operations.
+option(FIREBREATH_AUTO_GIT "Enable automatic git operations." ON)
+
 # First, find FB_ROOT
 get_filename_component(FB_ROOT ${CMAKE_CURRENT_LIST_FILE} PATH CACHE)
 
